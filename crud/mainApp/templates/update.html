@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}
+    <title>CRUD | Update</title>
+{% endblock %}
+
+{% block body %}
+<body>
+    
+    <h1>Add Record in the Table</h1>
+    <form action="#" method="post" class="form-control container my-5">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" name="Name" value="{{data.name}}">
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="" name="Email" value="{{data.email}}">
+            <label for="">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingtext" name="Salary" value="{{data.salary}}">
+            <label for="floatingtext">Salary</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingtext" name="Designation" value="{{data.dsg}}">
+            <label for="floatingtext">Designation</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingtext" name="City" value="{{data.city}}">
+            <label for="floatingtext">City</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingtext" name="State" value="{{data.state}}">
+            <label for="floatingtext">State</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="submit" class="form-control btn btn-secondary" id="floatingtext">
+            
+          </div>
+
+    </form>
+    
+
+</body>
+
+{% endblock %}
